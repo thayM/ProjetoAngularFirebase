@@ -12,6 +12,18 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor( ){ }
+  user:any = {
+    email: null,
+    password: null
+  }
 
+  constructor(public authService: AuthenticateService ){ }
+
+  create(){
+    this.authService.register(this.user.email, this.user.password);
+  }
+
+  login(){
+    this.authService.login(this.user.email, this.user.password);
+  }
 }

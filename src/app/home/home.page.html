@@ -1,4 +1,51 @@
 <ion-content [fullscreen]="true">
-    
+    <app-header title="Página principal"></app-header>
 
+    <ion-row class="ion-justify-content-center">
+        <ion-col size="10" size-lg="6">
+            <ion-card>
+                <ion-item>
+                    <ion-label>
+                        <h1>Criar conta</h1>
+                    </ion-label>
+                </ion-item>
+
+                <ion-item>
+                    <ion-input label="E-mail" [(ngModel)]="this.user.email"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-input label="Senha" [(ngModel)]="this.user.password"></ion-input>
+                </ion-item>
+
+                <ion-item lines="none">
+                    <ion-button color="primary" (click)="create()">Criar conta</ion-button>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
+
+    <ion-row class="ion-justify-content-center">
+        <ion-col size="10" size-lg="6">
+            <ion-card>
+                <ion-item>
+                    <ion-label>
+                        <h1>Login</h1>
+                    </ion-label>
+                </ion-item>
+
+                <ion-item>
+                    <ion-input label="E-mail" [(ngModel)]="this.user.email"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-input label="Senha" [(ngModel)]="this.user.password"></ion-input>
+                </ion-item>
+
+                <ion-item lines="none">
+                    <ion-button color="tertiary" (click)="login()">Acessar</ion-button>
+                </ion-item>
+            </ion-card>
+        </ion-col>
+    </ion-row>
 </ion-content>
